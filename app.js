@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 const crypto = require('node:crypto')
-// const z = require('zod')
 const vehicles = require('./data/vehicles.json')
+const { validateVehicle } = require('./schemas/vehicle')
 const PORT = process.env.PORT ?? 6675
 
 app.disable('x-powered-by')
@@ -30,16 +30,13 @@ app.get('/vehicles/:id', (req, resp) => {
 })
 
 app.post('/vehicles', (req, resp) => {
-  const { name, model, year, description, price, urlImage } = req.body
+  const acceptVehicle = validateVehicle(req.body)
+
+  if (acceptVehicle.error) return resp.status(400).json({ message: JSON.parse(`${acceptVehicle.error}`) })
 
   const newVehicle = {
     id: crypto.randomUUID(),
-    name,
-    model,
-    year,
-    description,
-    price,
-    urlImage
+    ...acceptVehicle.data
   }
 
   vehicles.push(newVehicle)

@@ -10,8 +10,8 @@ Content-Type: application/json
 {
   "name": "Jaguar F",
   "model": "F",
-  "year": "2018",
+  "year": 2018,
   "description": "The Jaguar F-Type is a two-door, two-seater sports car manufactured by British luxury car manufacturer Jaguar Land Rover.",
-  "price": "$61,600",
+  "price": 200000,
   "urlImage": "https://images.pexels.com/photos/19026324/pexels-photo-19026324/free-photo-of-orange-jaguar-f-type.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 }
