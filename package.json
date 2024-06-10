@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "standard": "^17.1.0"
+    "standard": "17.1.0"
   },
   "eslintConfig": {
     "extends": "standard"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "4.19.2"
   }
 }
