@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Vehicles</title>
+</head>
+
+<style>
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    article {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    article p {
+        width: auto;
+        height: 50px;
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<script type="module">
+    fetch('http://localhost:6675/vehicles')
+        .then(resp => resp.json())
+        .then(data => {
+            const dataVehicles = data.map(vehicle => {
+                return `<article data-id=${vehicle.id}>
+                <h1>${vehicle.name}</h1>
+                <p>${vehicle.description}</p>
+                <img src="${vehicle.urlImage}" alt="${vehicle.name}">
+                <strong>${vehicle.price}</strong>
+                <button>Quitar</button>
+            </article>`
+            }).join('')
+
+            document.querySelector('main').innerHTML = dataVehicles
+            document.addEventListener('click', e => {
+                if (e.target.matches('button')) {
+                    const article = e.target.closest('article')
+                    const id = article.dataset.id
+                    fetch(`http://localhost:6675/vehicles/${id}`, {
+                        method: 'DELETE'
+                    }).then(resp => {
+                        if (resp.ok) {
+                            article.remove()
+                        }
+                    })
+                }
+            })
+        })
+</script>
+
+<body>
+    <main>
+
+    </main>
+</body>
+
+</html>
