@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Vehicles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <style>
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
     main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -32,6 +39,16 @@
         object-fit: cover;
         border-radius: 5px;
         margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: #f00;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
     }
 </style>
 
@@ -43,8 +60,8 @@
                 return `<article data-id=${vehicle.id}>
                 <h1>${vehicle.name}</h1>
                 <p>${vehicle.description}</p>
+                Price: <strong>${vehicle.price}</strong>
                 <img src="${vehicle.urlImage}" alt="${vehicle.name}">
-                <strong>${vehicle.price}</strong>
                 <button>Quitar</button>
             </article>`
             }).join('')
