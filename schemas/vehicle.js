@@ -16,6 +16,11 @@ function validateVehicle (object) {
   return vehicleSchema.safeParse(object)
 }
 
+function updateVehicleAccept (object) {
+  return vehicleSchema.partial().safeParse(object)
+}
+
 module.exports = {
-  validateVehicle
+  validateVehicle,
+  updateVehicleAccept
 }

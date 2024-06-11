@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const crypto = require('node:crypto')
 const vehicles = require('./data/vehicles.json')
-const { validateVehicle } = require('./schemas/vehicle')
+const { validateVehicle, updateVehicleAccept } = require('./schemas/vehicle')
 const PORT = process.env.PORT ?? 6675
 
 app.disable('x-powered-by')
@@ -42,6 +42,24 @@ app.post('/vehicles', (req, resp) => {
   vehicles.push(newVehicle)
 
   return resp.status(201).json(newVehicle)
+})
+
+app.patch('/vehicles/:id', (req, resp) => {
+  const result = updateVehicleAccept(req.body)
+  if (result.error) return resp.status(400).json({ message: JSON.parse(`${result.error}`) })
+
+  const { id } = req.params
+  const vehicleIndex = vehicles.findIndex(vehicle => vehicle.id === id)
+  if (vehicleIndex === -1) return resp.status(400).json({ message: "Vehicle id don't exist." })
+
+  const updateVehicle = {
+    ...vehicles[vehicleIndex],
+    ...result.data
+  }
+
+  vehicles[vehicleIndex] = updateVehicle
+
+  return resp.json(updateVehicle)
 })
 
 app.listen(PORT, () => {
