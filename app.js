@@ -5,11 +5,20 @@ const vehicles = require('./data/vehicles.json')
 const { validateVehicle, updateVehicleAccept } = require('./schemas/vehicle')
 const PORT = process.env.PORT ?? 6675
 
+const ACCEPTED_ORIGINS = [
+  'http://localhost:8080'
+]
+
 app.disable('x-powered-by')
 app.use(express.json())
+
 app.get('/vehicles', (req, resp) => {
-  resp.header('Access-Control-Allow-Origin', 'http://localhost:8080')
   const { year } = req.query
+
+  const origin = req.header('origin')
+  if (ACCEPTED_ORIGINS.includes(origin)) {
+    resp.header('Access-Control-Allow-Origin', origin)
+  }
   const existYear = vehicles.findIndex(vehicle => vehicle.year === year)
   if (year) {
     if (existYear === -1) {
@@ -32,7 +41,12 @@ app.get('/vehicles/:id', (req, resp) => {
 
 app.delete('/vehicles/:id', (req, resp) => {
   const { id } = req.params
-  resp.header('Access-Control-Allow-Origin', 'http://localhost:8080')
+
+  const origin = req.header('origin')
+  if (ACCEPTED_ORIGINS.includes(origin)) {
+    resp.header('Access-Control-Allow-Origin', origin)
+  }
+
   const vehicleIndex = vehicles.findIndex(vehicle => vehicle.id === id)
   if (vehicleIndex === -1) return resp.status(400).json({ message: "Vehicle id don't exist." })
 
@@ -75,10 +89,12 @@ app.patch('/vehicles/:id', (req, resp) => {
 })
 
 app.options('/vehicles/:id', (req, resp) => {
-  resp.header('Access-Control-Allow-Origin', 'http://localhost:8080')
-  resp.header('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE')
-
-  resp.send('200')
+  const origin = req.header('origin')
+  if (ACCEPTED_ORIGINS.includes(origin)) {
+    resp.header('Access-Control-Allow-Origin', origin)
+    resp.header('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE')
+  }
+  resp.sendStatus('200')
 })
 
 app.listen(PORT, () => {
