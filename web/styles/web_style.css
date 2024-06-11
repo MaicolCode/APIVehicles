@@ -31,8 +31,8 @@ article p {
   background: linear-gradient(
     40deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
+    rgb(32, 1, 45) 35%,
+    rgb(111, 0, 255) 100%
   );
   width: 100%;
   height: 100vh;
