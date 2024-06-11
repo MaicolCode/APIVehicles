@@ -8,6 +8,7 @@ const PORT = process.env.PORT ?? 6675
 app.disable('x-powered-by')
 app.use(express.json())
 app.get('/vehicles', (req, resp) => {
+  resp.header('Access-Control-Allow-Origin', 'http://localhost:8080')
   const { year } = req.query
   const existYear = vehicles.findIndex(vehicle => vehicle.year === year)
   if (year) {
@@ -27,6 +28,17 @@ app.get('/vehicles/:id', (req, resp) => {
   const vehicle = vehicles.find(vehicle => vehicle.id === id)
   if (vehicle) return resp.json(vehicle)
   return resp.status(400).json({ message: "Vehicle id don't exist." })
+})
+
+app.delete('/vehicles/:id', (req, resp) => {
+  const { id } = req.params
+  resp.header('Access-Control-Allow-Origin', 'http://localhost:8080')
+  const vehicleIndex = vehicles.findIndex(vehicle => vehicle.id === id)
+  if (vehicleIndex === -1) return resp.status(400).json({ message: "Vehicle id don't exist." })
+
+  vehicles.splice(vehicleIndex, 1)
+
+  return resp.status(204).json({ message: 'Vehicle deleted.' })
 })
 
 app.post('/vehicles', (req, resp) => {
@@ -60,6 +72,13 @@ app.patch('/vehicles/:id', (req, resp) => {
   vehicles[vehicleIndex] = updateVehicle
 
   return resp.json(updateVehicle)
+})
+
+app.options('/vehicles/:id', (req, resp) => {
+  resp.header('Access-Control-Allow-Origin', 'http://localhost:8080')
+  resp.header('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE')
+
+  resp.send('200')
 })
 
 app.listen(PORT, () => {

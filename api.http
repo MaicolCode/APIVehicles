@@ -17,9 +17,9 @@ Content-Type: application/json
 }
 
 ### PATCH para actualizar un vehiculo.
-PATCH http://localhost:6675/vehicles/5ae94a8f-c6e6-4360-8db2-3175d922caaa
+PATCH http://localhost:6675/vehicles/2f6e1c6e-065f-4445-bdf2-d385286bae5d
 Content-Type: application/json
 
 {  
-  "year": 2018
+  "year": 2020
 }
