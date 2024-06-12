@@ -29,6 +29,33 @@
             }).join('')
 
             document.querySelector('div', 'slide_content').innerHTML = dataVehicles
+            let cont = 0
+            document.addEventListener('keydown', e => {
+                const article = document.querySelectorAll('article')
+                if (e.key === 'ArrowRight') {
+                    if (cont <= article.length - 2) {
+                        cont++
+                        let id = article[cont]
+                        let articleSelected = id.setAttribute('class', 'active')
+                        setTimeout(() => {
+                            id.removeAttribute('class', 'active')
+                        }, 2000)
+                        console.log(cont)
+                    }
+                }
+                if (e.key === 'ArrowLeft') {
+                    if (cont > 0) {
+                        cont--
+                        let id = article[cont]
+                        let articleSelected = id.setAttribute('class', 'active')
+                        setTimeout(() => {
+                            id.removeAttribute('class', 'active')
+                        }, 2000)
+                        console.log(cont)
+                    }
+                }
+            })
+
             document.addEventListener('click', e => {
                 if (e.target.matches('button')) {
                     const article = e.target.closest('article')
