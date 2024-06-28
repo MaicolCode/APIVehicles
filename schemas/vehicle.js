@@ -1,4 +1,4 @@
-const z = require('zod')
+import { z } from 'zod'
 
 const vehicleSchema = z.object({
   name: z.string({
@@ -12,15 +12,10 @@ const vehicleSchema = z.object({
   urlImage: z.string().url()
 })
 
-function validateVehicle (object) {
+export function validateVehicle (object) {
   return vehicleSchema.safeParse(object)
 }
 
-function updateVehicleAccept (object) {
+export function updateVehicleAccept (object) {
   return vehicleSchema.partial().safeParse(object)
-}
-
-module.exports = {
-  validateVehicle,
-  updateVehicleAccept
 }

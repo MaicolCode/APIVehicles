@@ -1,17 +1,22 @@
-const express = require('express')
-const app = express()
-const crypto = require('node:crypto')
-const cors = require('cors')
-const vehicles = require('./data/vehicles.json')
-const { validateVehicle, updateVehicleAccept } = require('./schemas/vehicle')
+import express, { json } from 'express'
+import { randomUUID } from 'node:crypto'
+import cors from 'cors'
+import { validateVehicle, updateVehicleAccept } from './schemas/vehicle.js'
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const readJSON = (path) => require(path)
+
+const vehicles = readJSON('./data/vehicles.json')
 const PORT = process.env.PORT ?? 6675
+const app = express()
 
 const ACCEPTED_ORIGINS = [
   'http://localhost:8080'
 ]
 
 app.disable('x-powered-by')
-app.use(express.json())
+app.use(json())
 
 app.use(cors({
   cors: (origin, callback) => {
@@ -62,7 +67,7 @@ app.post('/vehicles', (req, resp) => {
   if (acceptVehicle.error) return resp.status(400).json({ message: JSON.parse(`${acceptVehicle.error}`) })
 
   const newVehicle = {
-    id: crypto.randomUUID(),
+    id: randomUUID(),
     ...acceptVehicle.data
   }
 
