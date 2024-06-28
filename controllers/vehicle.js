@@ -1,16 +1,19 @@
 import { validateVehicle, updateVehicleAccept } from '../schemas/vehicle.js'
-// import { VehicleModel } from '../models/data-system/vehicle.js'
-import { VehicleModel } from '../models/data-mysql/vehicle.js'
-export class VehicleController {
-  static async genAll (req, resp) {
-    const { year } = req.query
 
-    resp.json(await VehicleModel.getAll({ year }))
+export class VehicleController {
+  constructor (vehicleModel) {
+    this.vehicleModel = vehicleModel
   }
 
-  static async getById (req, resp) {
+  genAll = async (req, resp) => {
+    const { year } = req.query
+
+    resp.json(await this.vehicleModel.getAll({ year }))
+  }
+
+  getById = async (req, resp) => {
     const { id } = req.params
-    const result = await VehicleModel.getById({ id })
+    const result = await this.vehicleModel.getById({ id })
     if (result) {
       return resp.json(result)
     } else {
@@ -18,29 +21,29 @@ export class VehicleController {
     }
   }
 
-  static async delete (req, resp) {
+  delete = async (req, resp) => {
     const { id } = req.params
 
-    const result = await VehicleModel.delete({ id })
+    const result = await this.vehicleModel.delete({ id })
     if (!result) return resp.status(400).json({ message: "Vehicle id don't exist." })
 
     return resp.status(200).json({ message: 'Vehicle deleted.' })
   }
 
-  static async create (req, resp) {
+  create = async (req, resp) => {
     const acceptVehicle = validateVehicle(req.body)
 
     if (acceptVehicle.error) return resp.status(400).json({ message: JSON.parse(`${acceptVehicle.error}`) })
 
-    return resp.status(201).json(await VehicleModel.create({ input: acceptVehicle.data }))
+    return resp.status(201).json(await this.vehicleModel.create({ input: acceptVehicle.data }))
   }
 
-  static async update (req, resp) {
+  update = async (req, resp) => {
     const result = updateVehicleAccept(req.body)
     if (result.error) return resp.status(400).json({ message: JSON.parse(`${result.error}`) })
 
     const { id } = req.params
-    const response = await VehicleModel.update({ id, input: result.data })
+    const response = await this.vehicleModel.update({ id, input: result.data })
     if (!response) return resp.status(400).json({ message: "Vehicle id don't exist." })
 
     return resp.json(response)

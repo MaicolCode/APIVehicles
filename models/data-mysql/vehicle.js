@@ -15,22 +15,22 @@ const connection = await mysql.createConnection(connectionString)
 export class VehicleModel {
   static async getAll ({ year }) {
     if (year) {
-      const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle WHERE year = ?', [year])
+      const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle WHERE year = ?', [year])
       if (vehicle.length === 0) return ({ message: 'Vehicle year not found.' })
       return vehicle
     }
-    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle')
+    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle')
     return vehicle
   }
 
   static async getById ({ id }) {
-    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
+    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
     if (vehicle.length === 0) return false
     return vehicle[0]
   }
 
   static async delete ({ id }) {
-    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
+    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
     if (vehicle.length === 0) return false
     await connection.query('DELETE FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
     return true
@@ -42,21 +42,21 @@ export class VehicleModel {
     const [{ uuid }] = uuidResult
 
     try {
-      await connection.query(`INSERT INTO vehicle (id, name, model, year, description, price, imageURL) VALUES 
+      await connection.query(`INSERT INTO vehicle (id, name, model, year, description, price, urlImage) VALUES 
         (UUID_TO_BIN("${uuid}"),?,?,?,?,?,?);`, [name, model, year, description, price, urlImage])
     } catch (error) {
       return { message: 'Error to create vehicle.' }
     }
-    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle WHERE id = UUID_TO_BIN(?)', [uuid])
+    const [vehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle WHERE id = UUID_TO_BIN(?)', [uuid])
     return vehicle
   }
 
   static async update ({ id, input }) {
-    const [result] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
+    const [result] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
     if (result.length === 0) return false
 
     await connection.query('UPDATE vehicle SET ? WHERE id = UUID_TO_BIN(?)', [input, id])
-    const [updatedVehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, imageURL FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
+    const [updatedVehicle] = await connection.query('SELECT BIN_TO_UUID(id) id, name, model, year, description, price, urlImage FROM vehicle WHERE id = UUID_TO_BIN(?)', [id])
     return updatedVehicle
   }
 }
