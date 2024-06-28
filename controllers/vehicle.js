@@ -1,5 +1,6 @@
 import { validateVehicle, updateVehicleAccept } from '../schemas/vehicle.js'
-import { VehicleModel } from '../models/vehicle.js'
+// import { VehicleModel } from '../models/data-system/vehicle.js'
+import { VehicleModel } from '../models/data-mysql/vehicle.js'
 export class VehicleController {
   static async genAll (req, resp) {
     const { year } = req.query

@@ -8,7 +8,7 @@ const vehicleSchema = z.object({
   model: z.string(),
   year: z.number().int().min(2000).max(2024),
   description: z.string(),
-  price: z.number().min(1000).max(500000),
+  price: z.number().min(100.000).max(500.000),
   urlImage: z.string().url()
 })
 
