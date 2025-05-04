@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sports Vehicles</title>
-    <link rel="stylesheet" href="/styles/web_style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/web_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<script type="module">
+  <script type="module">
     fetch('http://localhost:6675/vehicles')
-        .then(resp => resp.json())
-        .then(data => {
-            const dataVehicles = data.map(vehicle => {
-                return `<article data-id=${vehicle.id}>
+      .then((resp) => resp.json())
+      .then((data) => {
+        const dataVehicles = data
+          .map((vehicle) => {
+            return `<article data-id=${vehicle.id}>
                     <div class="infoCar">
                         <h1>${vehicle.name}</h1>
                         <label>Year: <strong>${vehicle.year}</strong></label>
@@ -26,58 +27,56 @@
                     </div>
                 <img src="${vehicle.urlImage}" alt="${vehicle.name}">                
             </article>`
-            }).join('')
+          })
+          .join('')
 
-            document.querySelector('div', 'slide_content').innerHTML = dataVehicles
-            let cont = 0
-            document.addEventListener('keydown', e => {
-                const article = document.querySelectorAll('article')
-                if (e.key === 'ArrowRight') {
-                    if (cont <= article.length - 2) {
-                        cont++
-                        let id = article[cont]
-                        let articleSelected = id.setAttribute('class', 'active')
-                        setTimeout(() => {
-                            id.removeAttribute('class', 'active')
-                        }, 2000)
-                        console.log(cont)
-                    }
-                }
-                if (e.key === 'ArrowLeft') {
-                    if (cont > 0) {
-                        cont--
-                        let id = article[cont]
-                        let articleSelected = id.setAttribute('class', 'active')
-                        setTimeout(() => {
-                            id.removeAttribute('class', 'active')
-                        }, 2000)
-                        console.log(cont)
-                    }
-                }
-            })
-
-            document.addEventListener('click', e => {
-                if (e.target.matches('button')) {
-                    const article = e.target.closest('article')
-                    const id = article.dataset.id
-                    fetch(`http://localhost:6675/vehicles/${id}`, {
-                        method: 'DELETE'
-                    }).then(resp => {
-                        if (resp.ok) {
-                            article.remove()
-                        }
-                    })
-                }
-            })
+        document.querySelector('div', 'slide_content').innerHTML = dataVehicles
+        let cont = 0
+        document.addEventListener('keydown', (e) => {
+          const article = document.querySelectorAll('article')
+          if (e.key === 'ArrowRight') {
+            if (cont <= article.length - 2) {
+              cont++
+              let id = article[cont]
+              let articleSelected = id.setAttribute('class', 'active')
+              setTimeout(() => {
+                id.removeAttribute('class', 'active')
+              }, 2000)
+              console.log(cont)
+            }
+          }
+          if (e.key === 'ArrowLeft') {
+            if (cont > 0) {
+              cont--
+              let id = article[cont]
+              let articleSelected = id.setAttribute('class', 'active')
+              setTimeout(() => {
+                id.removeAttribute('class', 'active')
+              }, 2000)
+              console.log(cont)
+            }
+          }
         })
-</script>
 
-<body>
+        document.addEventListener('click', (e) => {
+          if (e.target.matches('button')) {
+            const article = e.target.closest('article')
+            const id = article.dataset.id
+            fetch(`http://localhost:6675/vehicles/${id}`, {
+              method: 'DELETE'
+            }).then((resp) => {
+              if (resp.ok) {
+                article.remove()
+              }
+            })
+          }
+        })
+      })
+  </script>
+
+  <body>
     <main>
-        <div class="slide_content">
-
-        </div>
+      <div class="slide_content"></div>
     </main>
-</body>
-
+  </body>
 </html>
