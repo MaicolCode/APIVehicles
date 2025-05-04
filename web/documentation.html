@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/documentation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>API Vehicles Documentation</h1>
+    <p>
+      Welcome to the API Vehicles documentation. This guide will help you
+      understand how to interact with the API.
+    </p>
+
+    <h2>Base URL</h2>
+    <pre>https://api.vehicles.com/v1</pre>
+
+    <h2>Authentication</h2>
+    <p>
+      The API uses API keys for authentication. Include your API key in the
+      <code>Authorization</code> header as follows:
+    </p>
+    <pre>
+    Authorization: Bearer YOUR_API_KEY
+    </pre>
+
+    <h2>Endpoints</h2>
+
+    <h3>1. Get All Vehicles</h3>
+    <p>Retrieve a list of all vehicles.</p>
+    <pre>
+    GET /vehicles
+    </pre>
+    <p><strong>Response:</strong></p>
+    <pre>
+    [
+        {
+            "id": 1,
+            "make": "Toyota",
+            "model": "Corolla",
+            "year": 2020
+        },
+        {
+            "id": 2,
+            "make": "Honda",
+            "model": "Civic",
+            "year": 2019
+        }
+    ]
+    </pre>
+
+    <h3>2. Get Vehicle by ID</h3>
+    <p>Retrieve details of a specific vehicle by its ID.</p>
+    <pre>
+    GET /vehicles/{id}
+    </pre>
+    <p><strong>Response:</strong></p>
+    <pre>
+    {
+        "id": 1,
+        "make": "Toyota",
+        "model": "Corolla",
+        "year": 2020
+    }
+    </pre>
+
+    <h3>3. Add a New Vehicle</h3>
+    <p>Create a new vehicle entry.</p>
+    <pre>
+    POST /vehicles
+    </pre>
+    <p><strong>Request Body:</strong></p>
+    <pre>
+    {
+        "make": "Ford",
+        "model": "Focus",
+        "year": 2021
+    }
+    </pre>
+    <p><strong>Response:</strong></p>
+    <pre>
+    {
+        "id": 3,
+        "make": "Ford",
+        "model": "Focus",
+        "year": 2021
+    }
+    </pre>
+
+    <h3>4. Update a Vehicle</h3>
+    <p>Update details of an existing vehicle.</p>
+    <pre>
+    PUT /vehicles/{id}
+    </pre>
+    <p><strong>Request Body:</strong></p>
+    <pre>
+    {
+        "make": "Ford",
+        "model": "Focus",
+        "year": 2022
+    }
+    </pre>
+    <p><strong>Response:</strong></p>
+    <pre>
+    {
+        "id": 3,
+        "make": "Ford",
+        "model": "Focus",
+        "year": 2022
+    }
+    </pre>
+
+    <h3>5. Delete a Vehicle</h3>
+    <p>Delete a vehicle by its ID.</p>
+    <pre>
+    DELETE /vehicles/{id}
+    </pre>
+    <p><strong>Response:</strong></p>
+    <pre>
+    {
+        "message": "Vehicle deleted successfully."
+    }
+    </pre>
+
+    <h2>Error Handling</h2>
+    <p>
+      The API returns standard HTTP status codes to indicate the success or
+      failure of a request. Common status codes include:
+    </p>
+    <ul>
+      <li><strong>200 OK:</strong> The request was successful.</li>
+      <li>
+        <strong>400 Bad Request:</strong> The request was invalid or cannot be
+        served.
+      </li>
+      <li>
+        <strong>401 Unauthorized:</strong> Authentication failed or API key is
+        missing.
+      </li>
+      <li>
+        <strong>404 Not Found:</strong> The requested resource could not be
+        found.
+      </li>
+      <li>
+        <strong>500 Internal Server Error:</strong> An error occurred on the
+        server.
+      </li>
+    </ul>
+  </body>
+</html>
