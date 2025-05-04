@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { VehicleController } from '../controllers/vehicle.js'
+import path from 'path'
 
 export const vehicleRouter = ({ modelVehicle }) => {
   const vehicleController = new VehicleController(modelVehicle)
@@ -15,6 +16,11 @@ export const vehicleRouter = ({ modelVehicle }) => {
   routerVehicle.post('/create', vehicleController.create)
 
   routerVehicle.patch('/:id', vehicleController.update)
+
+  routerVehicle.get('/web/:filename', (req, res) => {
+    const filePath = path.join(process.cwd(), 'web', req.params.filename)
+    res.sendFile(filePath)
+  })
 
   return routerVehicle
 }

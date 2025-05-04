@@ -9,6 +9,7 @@ export const createApp = ({ modelVehicle }) => {
   app.disable('x-powered-by')
   app.use(json())
   app.use(corsMiddleware)
+  app.use(express.static('styles'))
   app.use('/vehicles', vehicleRouter({ modelVehicle }))
 
   app.listen(PORT, () => {
