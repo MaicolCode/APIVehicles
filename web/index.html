@@ -12,7 +12,7 @@
   </head>
 
   <script type="module">
-    fetch('http://localhost:6675/vehicles')
+    fetch('http://localhost:6675/vehicles/all')
       .then((resp) => resp.json())
       .then((data) => {
         const dataVehicles = data
