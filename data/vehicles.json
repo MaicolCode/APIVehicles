@@ -151,5 +151,95 @@
     "description": "The Lexus LFA is a limited-production supercar known for its high-revving V10 engine and advanced design.",
     "price": "$375,000",
     "urlImage": "https://i.ebayimg.com/images/g/o~cAAOSwabRjZXHK/s-l1200.jpg"
+  },
+  {
+    "id": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+    "name": "Rolls-Royce Phantom",
+    "model": "Phantom",
+    "year": "2021",
+    "description": "The Rolls-Royce Phantom is a luxury sedan known for its opulence and advanced engineering.",
+    "price": "$450,000",
+    "urlImage": "https://cdn.motor1.com/images/mgl/G3AXvZ/s1/rolls-royce-phantom-goldfinger.jpg"
+  },
+  {
+    "id": "h9i0j1k2-l3m4-n5o6-p7q8-r9s0t1u2v3w4",
+    "name": "Maserati MC20",
+    "model": "MC20",
+    "year": "2022",
+    "description": "The Maserati MC20 is a mid-engine sports car that combines luxury and performance.",
+    "price": "$210,000",
+    "urlImage": "https://www.novitecgroup.com/assets/images/news/maserati/mc20/4__FitMaxWzEyODAsMTAyNF0.jpg"
+  },
+  {
+    "id": "i0j1k2l3-m4n5-o6p7-q8r9-s0t1u2v3w4x5",
+    "name": "Toyota Supra",
+    "model": "GR Supra",
+    "year": "2021",
+    "description": "The Toyota GR Supra is a sports car that offers a blend of performance and affordability.",
+    "price": "$43,090",
+    "urlImage": "https://acnews.blob.core.windows.net/imgnews/large/NAZ_32d9ae28b98b4cf9bfde6a1bae8f19ff.webp"
+  },
+  {
+    "id": "j1k2l3m4-n5o6-p7q8-r9s0-t1u2v3w4x5y6",
+    "name": "Honda NSX",
+    "model": "NSX",
+    "year": "2020",
+    "description": "The Honda NSX is a hybrid sports car that combines advanced technology with high performance.",
+    "price": "$157,500",
+    "urlImage": "https://media.drivingelectric.com/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1597798190/drivingelectric/2020-05/192855_thermal_orange_nsx_2020.jpg"
+  },
+  {
+    "id": "k2l3m4n5-o6p7-q8r9-s0t1-u2v3w4x5y6z7",
+    "name": "Alfa Romeo 4C",
+    "model": "4C",
+    "year": "2019",
+    "description": "The Alfa Romeo 4C is a lightweight sports car known for its agility and Italian design.",
+    "price": "$67,150",
+    "urlImage": "https://static1.topspeedimages.com/wordpress/wp-content/uploads/2022/12/2019-alfa-romeo-4c-spider-bring-a-trailer.jpg"
+  },
+  {
+    "id": "l3m4n5o6-p7q8-r9s0-t1u2-v3w4x5y6z7a8",
+    "name": "Lotus Evora GT",
+    "model": "Evora GT",
+    "year": "2021",
+    "description": "The Lotus Evora GT is a lightweight sports car designed for driving enthusiasts.",
+    "price": "$96,950",
+    "urlImage": "https://www.cnet.com/a/img/resize/8a5badb4d7bc02025b31d0fdb494d7b37f535bdc/hub/2019/07/31/3429b8ac-fd83-4e30-b729-b46a384175d4/ogi1-2020-lotus-evora-gt-009.jpg?auto=webp&fit=crop&height=900&width=1200"
+  },
+  {
+    "id": "m4n5o6p7-q8r9-s0t1-u2v3-w4x5y6z7a8b9",
+    "name": "Dodge Challenger SRT Hellcat",
+    "model": "Challenger SRT Hellcat",
+    "year": "2021",
+    "description": "The Dodge Challenger SRT Hellcat is a muscle car with a supercharged V8 engine.",
+    "price": "$61,150",
+    "urlImage": "https://hips.hearstapps.com/hmg-prod/images/2019-dodge-challenger-srt-hellcat-redeye-comparison-104-1581425446.jpg?crop=0.658xw:0.555xh;0.0896xw,0.293xh&resize=1200:*"
+  },
+  {
+    "id": "n5o6p7q8-r9s0-t1u2-v3w4-x5y6z7a8b9c0",
+    "name": "Subaru BRZ",
+    "model": "BRZ",
+    "year": "2022",
+    "description": "The Subaru BRZ is a lightweight sports car with a focus on handling and driving dynamics.",
+    "price": "$28,845",
+    "urlImage": "https://hips.hearstapps.com/hmg-prod/images/2023-subaru-brz-limited-6mt-lt-intro-381-1669913828.jpg?crop=0.655xw:0.552xh;0.0673xw,0.424xh&resize=2048:*"
+  },
+  {
+    "id": "o6p7q8r9-s0t1-u2v3-w4x5-y6z7a8b9c0d1",
+    "name": "Chevrolet Camaro ZL1",
+    "model": "Camaro ZL1",
+    "year": "2021",
+    "description": "The Chevrolet Camaro ZL1 is a high-performance version of the Camaro with a supercharged V8 engine.",
+    "price": "$63,000",
+    "urlImage": "https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/ed21d7e657764d8811eba1ee4364bb7daf73f710/photos/3gNdNaNz-senOisfQdk.jpg?t=169411902178"
+  },
+  {
+    "id": "p7q8r9s0-t1u2-v3w4-x5y6-z7a8b9c0d1e2",
+    "name": "Volkswagen Golf R",
+    "model": "Golf R",
+    "year": "2022",
+    "description": "The Volkswagen Golf R is a high-performance hatchback with all-wheel drive and advanced technology.",
+    "price": "$44,090",
+    "urlImage": "https://www.cnet.com/a/img/resize/d1598134f3a531f5a9be44d4d2311eff840bb227/hub/2021/06/01/92573c7d-5c62-46e3-8e5b-cfb7876fcdce/golf-r-ogi.jpg?auto=webp&fit=crop&height=675&width=1200"
   }
 ]
