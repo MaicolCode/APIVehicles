@@ -1,110 +1,155 @@
 [
-    {
-        "id": "2f6e1c6e-065f-4445-bdf2-d385286bae5d",
-        "name": "Ferrari 488 GTB",
-        "model": "488 GTB",
-        "year": "2019",
-        "description": "The Ferrari 488 GTB is a mid-engine sports car produced by the Italian automobile manufacturer Ferrari.",
-        "price": "$252,800",
-        "urlImage": "https://images.pexels.com/photos/16345861/pexels-photo-16345861/free-photo-of-ferrari-296-gtb.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "56d3b2c8-ff51-438a-b653-5114134a9fa0",
-        "name": "Lamborghini Huracan",
-        "model": "Huracan",
-        "year": "2020",
-        "description": "The Lamborghini Huracan is a sports car manufactured by Italian automotive manufacturer Lamborghini.",
-        "price": "$261,274",
-        "urlImage": "https://images.pexels.com/photos/17632045/pexels-photo-17632045/free-photo-of-orange-lamborghini-huracan-sports-car-standing-on-pads.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "5ae94a8f-c6e6-4360-8db2-3175d922caaa",
-        "name": "Audi R8",
-        "model": "R8",
-        "year": "2020",
-        "description": "The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's trademark quattro permanent all-wheel drive system.",
-        "price": "$169,900",
-        "urlImage": "https://images.pexels.com/photos/16124173/pexels-photo-16124173/free-photo-of-an-audi-r8-on-a-parking-lot-at-red-rocks-colorado-usa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "492c36fc-3a5a-4a12-9ed9-9d34cebc5825",
-        "name": "Mercedes-AMG GT",
-        "model": "AMG GT",
-        "year": "2020",
-        "description": "The Mercedes-AMG GT is a sports car produced by German automobile manufacturer Mercedes-AMG.",
-        "price": "$115,900",
-        "urlImage": "https://images.pexels.com/photos/21305003/pexels-photo-21305003/free-photo-of-mercedes-amg-sl43-am-rheinufer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "197d9a51-7057-4726-868a-6b3e42add629",
-        "name": "Chevrolet Corvette",
-        "model": "Corvette",
-        "year": "2018",
-        "description": "The Chevrolet Corvette is a mid-engine sports car manufactured by American automobile manufacturer Chevrolet.",
-        "price": "$58,900",
-        "urlImage": "https://images.pexels.com/photos/15677090/pexels-photo-15677090/free-photo-of-chevrolet-corvette-on-parking-lot-on-roof.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "39a12f1d-e29a-4467-86ee-f66c670627c4",
-        "name": "Nissan GT-R",
-        "model": "GT-R",
-        "year": "2018",
-        "description": "The Nissan GT-R is a sports car produced by Japanese automobile manufacturer Nissan.",
-        "price": "$113,540",
-        "urlImage": "https://images.pexels.com/photos/17918291/pexels-photo-17918291/free-photo-of-white-tuned-nissan-gt-r.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "d15ddbe7-e4bd-4eaa-95bc-a84820ff406d",
-        "name": "Aston Martin Vantage",
-        "model": "Vantage",
-        "year": "2020",
-        "description": "The Aston Martin Vantage is a two-seater grand tourer manufactured by British luxury car manufacturer Aston Martin.",
-        "price": "$139,000",
-        "urlImage": "https://images.pexels.com/photos/19986957/pexels-photo-19986957/free-photo-of-aston-martin-vantage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "f003452f-cb92-4bb4-bc37-93bebb8910a6",
-        "name": "BMW M4",
-        "model": "M4",
-        "year": "2017",
-        "description": "The BMW M4 is a high-performance version of the BMW 4 Series.",
-        "price": "$69,150",
-        "urlImage": "https://images.pexels.com/photos/15501093/pexels-photo-15501093/free-photo-of-green-bmw-m4-on-a-parking-lot-under-a-palm-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "5a1084f4-f890-4f82-830b-9c6fd3f945a6",
-        "name": "Jaguar F-Type",
-        "model": "F-Type",
-        "year": "2020",
-        "description": "The Jaguar F-Type is a two-door, two-seater sports car manufactured by British luxury car manufacturer Jaguar Land Rover.",
-        "price": "$61,600",
-        "urlImage": "https://images.pexels.com/photos/19026324/pexels-photo-19026324/free-photo-of-orange-jaguar-f-type.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "24b6121a-7aed-4f99-b591-95191c790754",
-        "name": "McLaren 720S",
-        "model": "720S",
-        "year": "2020",
-        "description": "The McLaren 720S is a sports car designed and manufactured by British automobile manufacturer McLaren Automotive.",
-        "price": "$299,000",
-        "urlImage": "https://images.pexels.com/photos/5623494/pexels-photo-5623494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "029d32c9-95e0-4c5b-9a07-3ee308bc8ab6",
-        "name": "Ford Mustang Shelby GT500",
-        "model": "Mustang Shelby GT500",
-        "year": "2017",
-        "description": "The Ford Mustang Shelby GT500 is a high-performance variant of the Ford Mustang.",
-        "price": "$70,300",
-        "urlImage": "https://images.pexels.com/photos/18038881/pexels-photo-18038881/free-photo-of-sports-shelby-mustang-on-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    },
-    {
-        "id": "ae2d77ff-cbcb-4f91-ab96-6f50770f2b4f",
-        "name": "Pagani Huayra",
-        "model": "Huayra",
-        "year": "2019",
-        "description": "The Pagani Huayra is an Italian mid-engine sports car produced by Pagani.",
-        "price": "$3,400,000",
-        "urlImage": "https://hips.hearstapps.com/hmg-prod/images/pagani-huayra-bc-pacchetto-tempesta-1628254886.jpg?crop=1.00xw:0.892xh;0,0.108xh&resize=1200:*"
-    }
+  {
+    "id": "2f6e1c6e-065f-4445-bdf2-d385286bae5d",
+    "name": "Ferrari 488 GTB",
+    "model": "488 GTB",
+    "year": "2019",
+    "description": "The Ferrari 488 GTB is a mid-engine sports car produced by the Italian automobile manufacturer Ferrari.",
+    "price": "$252,800",
+    "urlImage": "https://images.pexels.com/photos/16345861/pexels-photo-16345861/free-photo-of-ferrari-296-gtb.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "56d3b2c8-ff51-438a-b653-5114134a9fa0",
+    "name": "Lamborghini Huracan",
+    "model": "Huracan",
+    "year": "2020",
+    "description": "The Lamborghini Huracan is a sports car manufactured by Italian automotive manufacturer Lamborghini.",
+    "price": "$261,274",
+    "urlImage": "https://images.pexels.com/photos/17632045/pexels-photo-17632045/free-photo-of-orange-lamborghini-huracan-sports-car-standing-on-pads.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "5ae94a8f-c6e6-4360-8db2-3175d922caaa",
+    "name": "Audi R8",
+    "model": "R8",
+    "year": "2020",
+    "description": "The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's trademark quattro permanent all-wheel drive system.",
+    "price": "$169,900",
+    "urlImage": "https://images.pexels.com/photos/16124173/pexels-photo-16124173/free-photo-of-an-audi-r8-on-a-parking-lot-at-red-rocks-colorado-usa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "492c36fc-3a5a-4a12-9ed9-9d34cebc5825",
+    "name": "Mercedes-AMG GT",
+    "model": "AMG GT",
+    "year": "2020",
+    "description": "The Mercedes-AMG GT is a sports car produced by German automobile manufacturer Mercedes-AMG.",
+    "price": "$115,900",
+    "urlImage": "https://images.pexels.com/photos/21305003/pexels-photo-21305003/free-photo-of-mercedes-amg-sl43-am-rheinufer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "197d9a51-7057-4726-868a-6b3e42add629",
+    "name": "Chevrolet Corvette",
+    "model": "Corvette",
+    "year": "2018",
+    "description": "The Chevrolet Corvette is a mid-engine sports car manufactured by American automobile manufacturer Chevrolet.",
+    "price": "$58,900",
+    "urlImage": "https://images.pexels.com/photos/15677090/pexels-photo-15677090/free-photo-of-chevrolet-corvette-on-parking-lot-on-roof.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "39a12f1d-e29a-4467-86ee-f66c670627c4",
+    "name": "Nissan GT-R",
+    "model": "GT-R",
+    "year": "2018",
+    "description": "The Nissan GT-R is a sports car produced by Japanese automobile manufacturer Nissan.",
+    "price": "$113,540",
+    "urlImage": "https://images.pexels.com/photos/17918291/pexels-photo-17918291/free-photo-of-white-tuned-nissan-gt-r.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "d15ddbe7-e4bd-4eaa-95bc-a84820ff406d",
+    "name": "Aston Martin Vantage",
+    "model": "Vantage",
+    "year": "2020",
+    "description": "The Aston Martin Vantage is a two-seater grand tourer manufactured by British luxury car manufacturer Aston Martin.",
+    "price": "$139,000",
+    "urlImage": "https://images.pexels.com/photos/19986957/pexels-photo-19986957/free-photo-of-aston-martin-vantage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "f003452f-cb92-4bb4-bc37-93bebb8910a6",
+    "name": "BMW M4",
+    "model": "M4",
+    "year": "2017",
+    "description": "The BMW M4 is a high-performance version of the BMW 4 Series.",
+    "price": "$69,150",
+    "urlImage": "https://images.pexels.com/photos/15501093/pexels-photo-15501093/free-photo-of-green-bmw-m4-on-a-parking-lot-under-a-palm-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "5a1084f4-f890-4f82-830b-9c6fd3f945a6",
+    "name": "Jaguar F-Type",
+    "model": "F-Type",
+    "year": "2020",
+    "description": "The Jaguar F-Type is a two-door, two-seater sports car manufactured by British luxury car manufacturer Jaguar Land Rover.",
+    "price": "$61,600",
+    "urlImage": "https://images.pexels.com/photos/19026324/pexels-photo-19026324/free-photo-of-orange-jaguar-f-type.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "24b6121a-7aed-4f99-b591-95191c790754",
+    "name": "McLaren 720S",
+    "model": "720S",
+    "year": "2020",
+    "description": "The McLaren 720S is a sports car designed and manufactured by British automobile manufacturer McLaren Automotive.",
+    "price": "$299,000",
+    "urlImage": "https://images.pexels.com/photos/5623494/pexels-photo-5623494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "029d32c9-95e0-4c5b-9a07-3ee308bc8ab6",
+    "name": "Ford Mustang Shelby GT500",
+    "model": "Mustang Shelby GT500",
+    "year": "2017",
+    "description": "The Ford Mustang Shelby GT500 is a high-performance variant of the Ford Mustang.",
+    "price": "$70,300",
+    "urlImage": "https://images.pexels.com/photos/18038881/pexels-photo-18038881/free-photo-of-sports-shelby-mustang-on-parking-lot.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "ae2d77ff-cbcb-4f91-ab96-6f50770f2b4f",
+    "name": "Pagani Huayra",
+    "model": "Huayra",
+    "year": "2019",
+    "description": "The Pagani Huayra is an Italian mid-engine sports car produced by Pagani.",
+    "price": "$3,400,000",
+    "urlImage": "https://hips.hearstapps.com/hmg-prod/images/pagani-huayra-bc-pacchetto-tempesta-1628254886.jpg?crop=1.00xw:0.892xh;0,0.108xh&resize=1200:*"
+  },
+  {
+    "id": "b3c9f8a7-4e5b-4d8e-9c3d-8f7e6c8a9b2d",
+    "name": "Porsche 911 Turbo S",
+    "model": "911 Turbo S",
+    "year": "2021",
+    "description": "The Porsche 911 Turbo S is a high-performance version of the Porsche 911, known for its speed and luxury.",
+    "price": "$203,500",
+    "urlImage": "https://acnews.blob.core.windows.net/imgnews/medium/NAZ_b65fb2d1a634469f855f74989e6eeb78.jpg"
+  },
+  {
+    "id": "c4d2e3f6-7a8b-4c9d-9e0f-1a2b3c4d5e6f",
+    "name": "Tesla Roadster",
+    "model": "Roadster",
+    "year": "2022",
+    "description": "The Tesla Roadster is an all-electric sports car that offers incredible acceleration and cutting-edge technology.",
+    "price": "$200,000",
+    "urlImage": "https://www.shop4tesla.com/cdn/shop/articles/1roadi_42f236a7-c4fe-465f-bc7b-1377b0ce2d66.png?format=pjpg&pad_color=ffffff&v=1740472787&width=1920"
+  },
+  {
+    "id": "d7e8f9a1-2b3c-4d5e-6f7a-8b9c0d1e2f3g",
+    "name": "Koenigsegg Jesko",
+    "model": "Jesko",
+    "year": "2021",
+    "description": "The Koenigsegg Jesko is a hypercar designed for extreme performance and speed, produced by Swedish manufacturer Koenigsegg.",
+    "price": "$3,000,000",
+    "urlImage": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/07/02/15936898735856.jpg"
+  },
+  {
+    "id": "e9f0a1b2-3c4d-5e6f-7a8b-9c0d1e2f3g4h",
+    "name": "Bugatti Chiron",
+    "model": "Chiron",
+    "year": "2021",
+    "description": "The Bugatti Chiron is a luxury hypercar known for its incredible speed and engineering excellence.",
+    "price": "$3,960,000",
+    "urlImage": "https://img.remediosdigitales.com/82dfc9/bugatti-chiron-300-unidades-fabricadas-02/1366_2000.jpeg"
+  },
+  {
+    "id": "f1g2h3i4-5j6k-7l8m-9n0o-p1q2r3s4t5u6",
+    "name": "Lexus LFA",
+    "model": "LFA",
+    "year": "2012",
+    "description": "The Lexus LFA is a limited-production supercar known for its high-revving V10 engine and advanced design.",
+    "price": "$375,000",
+    "urlImage": "https://i.ebayimg.com/images/g/o~cAAOSwabRjZXHK/s-l1200.jpg"
+  }
 ]
