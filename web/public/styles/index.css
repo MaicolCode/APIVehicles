@@ -44,7 +44,7 @@ article p {
 .slide_content article {
   color: white;
   flex: 0 0 100%;
-  opacity: 0.9;
+  opacity: 1;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@ article p {
 }
 
 .active {
-  animation: fadeIn 3s;
+  animation: fadeIn 1.5s;
 }
 
 @keyframes fadeIn {
@@ -60,7 +60,7 @@ article p {
     opacity: 0;
   }
   100% {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 
