@@ -13,36 +13,71 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <nav class="menu-bar">
+        <article>
+          <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
+          <div class="option-docs-header">
+            <h3>Sport vehicles API</h3>
+          </div>
+        </article>
+        <ul>
+          <li><a href="./index.html">Vehicles</a></li>
+          <li><a href="">More</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="documentation-container">
-      <h1>API Vehicles Documentation</h1>
-      <p>
-        Welcome to the API Vehicles documentation. This guide will help you
-        understand how to interact with the API.
-      </p>
+      <section class="option-docs">
+        <span>Details</span>
+        <ul class="option-docs-list">
+          <li>
+            <a href="#base-url">Base URL</a>
+          </li>
+          <li>
+            <a href="#authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#endpoints">Endpoints</a>
+          </li>
+          <li>
+            <a href="#error-handling">Error Handling</a>
+          </li>
+          <li>
+            <a href="#examples">Examples</a>
+          </li>
+        </ul>
+      </section>
+      <section class="notes-docs">
+        <h1>API Vehicles Documentation</h1>
+        <p>
+          Welcome to the API Vehicles documentation. This guide will help you
+          understand how to interact with the API.
+        </p>
 
-      <h2>Base URL</h2>
-      <pre>https://api.vehicles.com/v1</pre>
+        <h2>Base URL</h2>
+        <pre>https://api.vehicles.com/v1</pre>
 
-      <h2>Authentication</h2>
-      <p>
-        The API uses API keys for authentication. Include your API key in the
-        <code>Authorization</code> header as follows:
-      </p>
-      <pre>
+        <h2>Authentication</h2>
+        <p>
+          The API uses API keys for authentication. Include your API key in the
+          <code>Authorization</code> header as follows:
+        </p>
+        <pre>
     Authorization: Bearer YOUR_API_KEY
     </pre
-      >
+        >
 
-      <h2>Endpoints</h2>
+        <h2>Endpoints</h2>
 
-      <h3>1. Get All Vehicles</h3>
-      <p>Retrieve a list of all vehicles.</p>
-      <pre>
+        <h3>1. Get All Vehicles</h3>
+        <p>Retrieve a list of all vehicles.</p>
+        <pre>
     GET /vehicles
     </pre
-      >
-      <p><strong>Response:</strong></p>
-      <pre>
+        >
+        <p><strong>Response:</strong></p>
+        <pre>
     [
         {
             "id": 1,
@@ -58,16 +93,16 @@
         }
     ]
     </pre
-      >
+        >
 
-      <h3>2. Get Vehicle by ID</h3>
-      <p>Retrieve details of a specific vehicle by its ID.</p>
-      <pre>
+        <h3>2. Get Vehicle by ID</h3>
+        <p>Retrieve details of a specific vehicle by its ID.</p>
+        <pre>
     GET /vehicles/{id}
     </pre
-      >
-      <p><strong>Response:</strong></p>
-      <pre>
+        >
+        <p><strong>Response:</strong></p>
+        <pre>
     {
         "id": 1,
         "make": "Toyota",
@@ -75,25 +110,25 @@
         "year": 2020
     }
     </pre
-      >
+        >
 
-      <h3>3. Add a New Vehicle</h3>
-      <p>Create a new vehicle entry.</p>
-      <pre>
+        <h3>3. Add a New Vehicle</h3>
+        <p>Create a new vehicle entry.</p>
+        <pre>
     POST /vehicles
     </pre
-      >
-      <p><strong>Request Body:</strong></p>
-      <pre>
+        >
+        <p><strong>Request Body:</strong></p>
+        <pre>
     {
         "make": "Ford",
         "model": "Focus",
         "year": 2021
     }
     </pre
-      >
-      <p><strong>Response:</strong></p>
-      <pre>
+        >
+        <p><strong>Response:</strong></p>
+        <pre>
     {
         "id": 3,
         "make": "Ford",
@@ -101,25 +136,25 @@
         "year": 2021
     }
     </pre
-      >
+        >
 
-      <h3>4. Update a Vehicle</h3>
-      <p>Update details of an existing vehicle.</p>
-      <pre>
+        <h3>4. Update a Vehicle</h3>
+        <p>Update details of an existing vehicle.</p>
+        <pre>
     PUT /vehicles/{id}
     </pre
-      >
-      <p><strong>Request Body:</strong></p>
-      <pre>
+        >
+        <p><strong>Request Body:</strong></p>
+        <pre>
     {
         "make": "Ford",
         "model": "Focus",
         "year": 2022
     }
     </pre
-      >
-      <p><strong>Response:</strong></p>
-      <pre>
+        >
+        <p><strong>Response:</strong></p>
+        <pre>
     {
         "id": 3,
         "make": "Ford",
@@ -127,46 +162,47 @@
         "year": 2022
     }
     </pre
-      >
+        >
 
-      <h3>5. Delete a Vehicle</h3>
-      <p>Delete a vehicle by its ID.</p>
-      <pre>
+        <h3>5. Delete a Vehicle</h3>
+        <p>Delete a vehicle by its ID.</p>
+        <pre>
     DELETE /vehicles/{id}
     </pre
-      >
-      <p><strong>Response:</strong></p>
-      <pre>
+        >
+        <p><strong>Response:</strong></p>
+        <pre>
     {
         "message": "Vehicle deleted successfully."
     }
     </pre
-      >
+        >
 
-      <h2>Error Handling</h2>
-      <p>
-        The API returns standard HTTP status codes to indicate the success or
-        failure of a request. Common status codes include:
-      </p>
-      <ul>
-        <li><strong>200 OK:</strong> The request was successful.</li>
-        <li>
-          <strong>400 Bad Request:</strong> The request was invalid or cannot be
-          served.
-        </li>
-        <li>
-          <strong>401 Unauthorized:</strong> Authentication failed or API key is
-          missing.
-        </li>
-        <li>
-          <strong>404 Not Found:</strong> The requested resource could not be
-          found.
-        </li>
-        <li>
-          <strong>500 Internal Server Error:</strong> An error occurred on the
-          server.
-        </li>
-      </ul>
+        <h2 id="error-handling">Error Handling</h2>
+        <p>
+          The API returns standard HTTP status codes to indicate the success or
+          failure of a request. Common status codes include:
+        </p>
+        <ul>
+          <li><strong>200 OK:</strong> The request was successful.</li>
+          <li>
+            <strong>400 Bad Request:</strong> The request was invalid or cannot
+            be served.
+          </li>
+          <li>
+            <strong>401 Unauthorized:</strong> Authentication failed or API key
+            is missing.
+          </li>
+          <li>
+            <strong>404 Not Found:</strong> The requested resource could not be
+            found.
+          </li>
+          <li>
+            <strong>500 Internal Server Error:</strong> An error occurred on the
+            server.
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
