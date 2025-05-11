@@ -1,9 +1,156 @@
 * {
   font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
   height: 100%;
   margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.menu-bar {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+  article {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .option-docs-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    h3 {
+      margin: 0;
+      font-size: medium;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin-left: 50px;
+  }
+
+  ul li {
+    font-size: 18px;
+    cursor: pointer;
+    font-size: 15px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        text-shadow: 0 0 1px #686868b0;
+        color: #666;
+      }
+    }
+  }
+}
+
+.menu-bar img {
+  width: auto;
+  height: 50px;
+  margin: 0;
+}
+
+.documentation-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.option-docs {
+  position: sticky;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 20%;
+  height: calc(100vh - 90px);
+  padding: 20px 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin: 0;
+  }
+
+  .option-docs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    list-style: none;
+    padding: 0px 0px 0px 10px;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+.notes-docs {
+  gap: 5px;
+  width: 75%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }
 }
