@@ -10,9 +10,31 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+
+    <!--Highlight.js cnd dependency for the sintaxis-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tokyo-night-dark.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <!--Clipboard.js cdn dependency for the copy code-->
+    <!-- Clipboard.js para copiar el código -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
     <title>Document</title>
   </head>
   <body>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize Highlight.js
+        hljs.highlightAll()
+        // Initialize Clipboard.js
+        const clipboard = new ClipboardJS('.copy-btn')
+        clipboard.on('success', (e) => {
+          alert('¡Código copiado!')
+          e.clearSelection()
+        })
+      })
+    </script>
     <header>
       <nav class="menu-bar">
         <article>
@@ -48,158 +70,191 @@
           </li>
         </ul>
       </section>
-      <section class="notes-docs">
+      <section class="notes-docs" id="base-url">
         <h1>API Vehicles Documentation</h1>
-        <p>
+        <p >
           Welcome to the API Vehicles documentation. This guide will help you
           understand how to interact with the API.
         </p>
 
-        <h2>Base URL</h2>
-        <pre>https://api.vehicles.com/v1</pre>
+        <h3 id="endpoints">Base URL</h3>
+        <hr>
+       <div>
+        <p>The base URL for all API requests is:</p>
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-base-url">
+            Copy
+          </button>
+          <pre><code id="code-base-url">http://localhost:6675/vehicles</code></pre>
+       </div>
 
-        <h2>Authentication</h2>
-        <p>
-          The API uses API keys for authentication. Include your API key in the
-          <code>Authorization</code> header as follows:
-        </p>
-        <pre>
-    Authorization: Bearer YOUR_API_KEY
-    </pre
-        >
+        
 
-        <h2>Endpoints</h2>
-
-        <h3>1. Get All Vehicles</h3>
+        <h3>Endpoints</h3>
+        <hr>
+        <h4>1. Get All Vehicles</h4>
         <p>Retrieve a list of all vehicles.</p>
-        <pre>
-    GET /vehicles
-    </pre
-        >
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicles">
+            Copy
+          </button>
+          <pre><code id="code-vehicles" >[GET] http://localhost:6675/vehicles/all          </code></pre>
         <p><strong>Response:</strong></p>
-        <pre>
-    [
-        {
-            "id": 1,
-            "make": "Toyota",
-            "model": "Corolla",
-            "year": 2020
-        },
-        {
-            "id": 2,
-            "make": "Honda",
-            "model": "Civic",
-            "year": 2019
-        }
-    ]
-    </pre
-        >
+        <section class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicles-response">
+            Copy
+          </button>
+          <pre><code id="code-vehicles-response">[
+  {
+      "id": "2f6e1c6e-065f-4445-bdf2-d385286bae5d",
+      "name": "Ferrari 488 GTB",
+      "model": "488 GTB",
+      "year": "2019",
+      "description": "The Ferrari 488 GTB is a mid-engine sports car produced by the  Italian automobile manufacturer Ferrari.",
+      "price": "$252,800",
+      "urlImage": "https://images.pexels.com/photos/16345861/pexels-photo-16345861/ free-photo-of-ferrari-296-gtb.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+      "id": "56d3b2c8-ff51-438a-b653-5114134a9fa0",
+      "name": "Lamborghini Huracan",
+      "model": "Huracan",
+      "year": "2020",
+      "description": "The Lamborghini Huracan is a sports car manufactured by Italian   automotive manufacturer Lamborghini.",
+      "price": "$261,274",
+      "urlImage": "https://images.pexels.com/photos/17632045/pexels-photo-17632045/ free-photo-of-orange-lamborghini-huracan-sports-car-standing-on-pads.jpeg? auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  }]</code></pre>
+        </section>
 
-        <h3>2. Get Vehicle by ID</h3>
+        <h4>2. Get Vehicle by ID</h4>
         <p>Retrieve details of a specific vehicle by its ID.</p>
-        <pre>
-    GET /vehicles/{id}
-    </pre
-        >
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicle-id">
+            Copy
+          </button>
+          <pre><code id="code-vehicle-id">[GET] http://localhost:6675/vehicles/{id}</code></pre>
+        </div>
         <p><strong>Response:</strong></p>
-        <pre>
-    {
-        "id": 1,
-        "make": "Toyota",
-        "model": "Corolla",
-        "year": 2020
-    }
-    </pre
-        >
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicle-id">
+            Copy
+          </button>
+          <pre><code id="code-vehicle-id">{
+    "id": "5ae94a8f-c6e6-4360-8db2-3175d922caaa",
+    "name": "Audi R8",
+    "model": "R8",
+    "year": 2019,
+    "description": "The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's   trademark quattro permanent all-wheel drive system.",
+    "price": "$169,900",
+    "urlImage": "https://images.pexels.com/photos/16124173/pexels-photo-16124173/ free-photo-of-an-audi-r8-on-a-parking-lot-at-red-rocks-colorado-usa.jpeg?auto=compress&  cs=tinysrgb&w=1260&h=750&dpr=1"
+}</code>
+          </pre>
+        </div>
 
-        <h3>3. Add a New Vehicle</h3>
+        <h4>3. Add a New Vehicle</h4>
         <p>Create a new vehicle entry.</p>
-        <pre>
-    POST /vehicles
-    </pre
-        >
-        <p><strong>Request Body:</strong></p>
-        <pre>
-    {
-        "make": "Ford",
-        "model": "Focus",
-        "year": 2021
-    }
-    </pre
-        >
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicle-post">
+            Copy
+          </button><pre><code id="code-vehicle-post">[POST] http://localhost:6675/vehicles  
+#body 
+{
+    "name": "Jaguar F",
+    "model": "F",
+    "year": 2018,
+    "description": "The Jaguar F-Type is a two-door, two-seater sports car manufactured by  British luxury car manufacturer Jaguar Land Rover.",
+    "price": 290.200,
+    "urlImage": "https://images.pexels.com/photos/19026324/pexels-photo-19026324/ free-photo-of-orange-jaguar-f-type.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+}</code></pre>
+        </div>
         <p><strong>Response:</strong></p>
-        <pre>
-    {
-        "id": 3,
-        "make": "Ford",
-        "model": "Focus",
-        "year": 2021
-    }
-    </pre
-        >
+        <div class="code-block">
+          <button
+            class="copy-btn"
+            data-clipboard-target="#code-vehicle-post-response"
+          >
+            Copy
+          </button><pre><code id="code-vehicle-post-response">{
+    "id": "5a1084f4-f890-4f82-830b-9c6fd3f945a6",
+    "name": "Jaguar F-Type",
+    "model": "F-Type",
+    "year": "2020",
+    "description": "The Jaguar F-Type is a two-door, two-seater sports car manufactured by British luxury car manufacturer Jaguar Land Rover.",
+    "price": "$61,600",
+    "urlImage": "https://images.pexels.com/photos/19026324/pexels-photo-19026324/free-photo-of-orange-jaguar-f-type.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+}</code></pre>
+        </div>
 
-        <h3>4. Update a Vehicle</h3>
+        <h4>4. Update a Vehicle</h4>
         <p>Update details of an existing vehicle.</p>
-        <pre>
-    PUT /vehicles/{id}
-    </pre
-        >
-        <p><strong>Request Body:</strong></p>
-        <pre>
-    {
-        "make": "Ford",
-        "model": "Focus",
-        "year": 2022
-    }
-    </pre
-        >
-        <p><strong>Response:</strong></p>
-        <pre>
-    {
-        "id": 3,
-        "make": "Ford",
-        "model": "Focus",
-        "year": 2022
-    }
-    </pre
-        >
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicle-put">
+            Copy
+          </button><pre><code id="code-vehicle-put">[PUT] http://localhost:6675/vehicles/{id}   
 
-        <h3>5. Delete a Vehicle</h3>
+#body 
+                           
+{  
+  "year": 2020
+}</code></pre>
+        </div>
+        <p><strong>Response:</strong></p>
+        <div class="code-block">
+          <button
+            class="copy-btn"
+            data-clipboard-target="#code-vehicle-put-response"
+          >
+            Copy
+          </button><pre><code id="code-vehicle-put-response">{
+    "id": "5ae94a8f-c6e6-4360-8db2-3175d922caaa",
+    "name": "Audi R8",
+    "model": "R8",
+    "year": 2019,
+    "description": "The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's   trademark qupermanent all-wheel drive system.",
+    "price": "$169,900",
+    "urlImage": "https://images.pexels.com/photos/16124173/ pexels-photo-161free-photo-of-an-audi-r8-on-a-parking-lot-at-red-rocks-colorado-usa. jpeg?auto=compress&cs=tinysrgb&wh=750&dpr=1"
+}</code></pre>
+        </div>
+
+        <h4>5. Delete a Vehicle</h4>
         <p>Delete a vehicle by its ID.</p>
-        <pre>
-    DELETE /vehicles/{id}
-    </pre
-        >
-        <p><strong>Response:</strong></p>
-        <pre>
-    {
-        "message": "Vehicle deleted successfully."
-    }
-    </pre
-        >
+        <div class="code-block">
+          <button class="copy-btn" data-clipboard-target="#code-vehicle-delete">
+            Copy
+          </button>
+          <pre><code id="code-vehicle-delete">[DELETE] http://localhost:6675/vehicles/{id}</code></pre>
+        </div>
 
-        <h2 id="error-handling">Error Handling</h2>
+        <p><strong>Response:</strong></p>
+        <pre><code>{
+    "message": "Vehicle deleted successfully."
+}</code></pre>
+
+        <h3 id="error-handling">Error Handling</h3>
+        <hr>
         <p>
           The API returns standard HTTP status codes to indicate the success or
           failure of a request. Common status codes include:
         </p>
         <ul>
-          <li><strong>200 OK:</strong> The request was successful.</li>
           <li>
-            <strong>400 Bad Request:</strong> The request was invalid or cannot
-            be served.
+            <strong>200 OK:</strong>
+            The request was successful.
           </li>
           <li>
-            <strong>401 Unauthorized:</strong> Authentication failed or API key
-            is missing.
+            <strong>400 Bad Request:</strong>
+            The request was invalid or cannot be served.
           </li>
           <li>
-            <strong>404 Not Found:</strong> The requested resource could not be
-            found.
+            <strong>401 Unauthorized:</strong>
+            Authentication failed or API key is missing.
           </li>
           <li>
-            <strong>500 Internal Server Error:</strong> An error occurred on the
-            server.
+            <strong>404 Not Found:</strong>
+            The requested resource could not be found.
+          </li>
+          <li>
+            <strong>500 Internal Server Error:</strong>
+            An error occurred on the server.
           </li>
         </ul>
       </section>
