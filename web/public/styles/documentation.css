@@ -53,9 +53,9 @@ header {
   }
 
   ul li {
-    font-size: 18px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 500;
 
     a {
       text-decoration: none;
@@ -64,7 +64,7 @@ header {
 
       &:hover {
         text-shadow: 0 0 1px #686868b0;
-        color: #666;
+        color: #353535;
       }
     }
   }
@@ -86,12 +86,12 @@ header {
 
 .option-docs {
   position: sticky;
-  top: 70px;
+  top: 72px;
   display: flex;
   flex-direction: column;
   gap: 0px;
   width: 20%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 114px);
   padding: 20px 10px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -156,9 +156,15 @@ header {
 }
 
 /*Styles code*/
+
 .code-block {
   position: relative;
   z-index: 1; /* Ensure it does not overlap improperly */
+
+  code {
+    font-size: 14px;
+    border-radius: 5px;
+  }
 }
 
 .copy-btn {
