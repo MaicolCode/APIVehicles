@@ -1,110 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/documentation.css" />
-    <link rel="stylesheet" href="/styles/menu.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <title>API Vehicles Introduction</title>
-  </head>
-  <body>
-    <header>
-      <nav class="menu-bar">
-        <section class="menu-options">
-          <article>
-            <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
-            <div class="option-docs-header">
-              <h3>Sport vehicles API</h3>
-            </div>
-          </article>
-          <ul>
-            <li><a href="./index.html">Vehicles</a></li>
-            <li><a href="">More</a></li>
-          </ul>
-        </section>
-        <section class="menu-others">
-          <article>
-            <a href="https://github.com/MaicolCode/APIVehicles" target="_blank">
-              <img
-                src="/github-icon.svg"
-                alt="github-logo"
-                height="10"
-                width="10"
-              />
-            </a>
-          </article>
-        </section>
-      </nav>
-    </header>
-    <main class="documentation-container">
-      <section class="option-docs">
-        <span>About</span>
-        <ul class="option-docs-list">
-          <li>
-            <a href="http://localhost:6675/vehicles/web/introduction.html">
-              Introduction
-            </a>
-          </li>
-        </ul>
-        <span>Rest API</span>
-        <ul class="option-docs-list">
-          <li>
-            <a href="rest.html/#base-url">Base URL</a>
-          </li>
-          <li>
-            <a href="rest.html/#endpoints">Endpoints</a>
-          </li>
-          <li>
-            <a href="rest.html/#error-handling">Error Handling</a>
-          </li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/documentation.css" />
+  <link rel="stylesheet" href="/styles/menu.css" />
+  <link rel="stylesheet" href="/styles/theme.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <title>API Vehicles Introduction</title>
+</head>
+
+<body>
+  <script type="module" src="/utils/interactivity.js"></script>
+  <header>
+    <nav class="menu-bar">
+      <section class="menu-options">
+        <article>
+          <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
+          <div class="option-docs-header">
+            <h3>Sport vehicles API</h3>
+          </div>
+        </article>
+        <ul>
+          <li><a href="./index.html">Vehicles</a></li>
+          <li><a href="">More</a></li>
         </ul>
       </section>
-      <section class="notes-docs">
-        <h1>Welcome to the Sport Vehicles API</h1>
-        <p class="description">
-          The sports vehicles API is a resource to access the information of
-          sports vehicles, the objective of this api is to provide a resource
-          that can be used for the development and creation of web projects, the
-          API provides all the essential components for the developer such as
-          the information of the vehicles and their respective endpoints.
-        </p>
-        <h2>Enpoints Features</h2>
-        <ul class="features-list">
-          <li>
-            <strong>Retrieve all vehicles:</strong>
-            Fetch a list of all available vehicles in the database.
-          </li>
-          <li>
-            <strong>Retrieve a vehicle by ID:</strong>
-            Get detailed information about a specific vehicle using its unique
-            ID.
-          </li>
-          <li>
-            <strong>Add a new vehicle:</strong>
-            Create a new entry in the database for a sports vehicle.
-          </li>
-          <li>
-            <strong>Update a vehicle:</strong>
-            Modify the details of an existing vehicle.
-          </li>
-          <li>
-            <strong>Delete a vehicle:</strong>
-            Remove a vehicle from the database using its ID.
-          </li>
-        </ul>
-        <p>
-          For more details on how to use the API, including endpoints, request
-          formats, and example responses, please visit the
-          <a href="./rest.html">API Documentation</a>
-          .
-        </p>
+      <section class="menu-others">
+        <article>
+          <a class="dark-mode-toggle" onclick="toggleDarkMode()"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg></a>
+
+          <a href="https://github.com/MaicolCode/APIVehicles" target="_blank"><svg height="24" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-mark-github v-align-middle" fill="currentColor">
+            <path d="M12 1C5.9225 1 1 5.9225 1 12C1 16.8675 4.14875 20.9787 8.52125 22.4362C9.07125 22.5325 9.2775 22.2025 9.2775 21.9137C9.2775 21.6525 9.26375 20.7862 9.26375 19.865C6.5 20.3737 5.785 19.1912 5.565 18.5725C5.44125 18.2562 4.905 17.28 4.4375 17.0187C4.0525 16.8125 3.5025 16.3037 4.42375 16.29C5.29 16.2762 5.90875 17.0875 6.115 17.4175C7.105 19.0812 8.68625 18.6137 9.31875 18.325C9.415 17.61 9.70375 17.1287 10.02 16.8537C7.5725 16.5787 5.015 15.63 5.015 11.4225C5.015 10.2262 5.44125 9.23625 6.1425 8.46625C6.0325 8.19125 5.6475 7.06375 6.2525 5.55125C6.2525 5.55125 7.17375 5.2625 9.2775 6.67875C10.1575 6.43125 11.0925 6.3075 12.0275 6.3075C12.9625 6.3075 13.8975 6.43125 14.7775 6.67875C16.8813 5.24875 17.8025 5.55125 17.8025 5.55125C18.4075 7.06375 18.0225 8.19125 17.9125 8.46625C18.6138 9.23625 19.04 10.2125 19.04 11.4225C19.04 15.6437 16.4688 16.5787 14.0213 16.8537C14.42 17.1975 14.7638 17.8575 14.7638 18.8887C14.7638 20.36 14.75 21.5425 14.75 21.9137C14.75 22.2025 14.9563 22.5462 15.5063 22.4362C19.8513 20.9787 23 16.8537 23 12C23 5.9225 18.0775 1 12 1Z"></path>
+        </svg></a>
+        </article>
       </section>
-    </main>
-  </body>
+    </nav>
+  </header>
+  <main class="documentation-container">
+    <section class="option-docs">
+      <span>About</span>
+      <ul class="option-docs-list">
+        <li>
+          <a href="http://localhost:6675/vehicles/web/introduction.html">
+            Introduction
+          </a>
+        </li>
+      </ul>
+      <span>Rest API</span>
+      <ul class="option-docs-list">
+        <li>
+          <a href="rest.html/#base-url">Base URL</a>
+        </li>
+        <li>
+          <a href="rest.html/#endpoints">Endpoints</a>
+        </li>
+        <li>
+          <a href="rest.html/#error-handling">Error Handling</a>
+        </li>
+      </ul>
+    </section>
+    <section class="notes-docs">
+      <h1>Welcome to the Sport Vehicles API</h1>
+      <p class="description">
+        The sports vehicles API is a resource to access the information of
+        sports vehicles, the objective of this api is to provide a resource
+        that can be used for the development and creation of web projects, the
+        API provides all the essential components for the developer such as
+        the information of the vehicles and their respective endpoints.
+      </p>
+      <h2>Enpoints Features</h2>
+      <ul class="features-list">
+        <li>
+          <strong>Retrieve all vehicles:</strong>
+          Fetch a list of all available vehicles in the database.
+        </li>
+        <li>
+          <strong>Retrieve a vehicle by ID:</strong>
+          Get detailed information about a specific vehicle using its unique
+          ID.
+        </li>
+        <li>
+          <strong>Add a new vehicle:</strong>
+          Create a new entry in the database for a sports vehicle.
+        </li>
+        <li>
+          <strong>Update a vehicle:</strong>
+          Modify the details of an existing vehicle.
+        </li>
+        <li>
+          <strong>Delete a vehicle:</strong>
+          Remove a vehicle from the database using its ID.
+        </li>
+      </ul>
+      <p>
+        For more details on how to use the API, including endpoints, request
+        formats, and example responses, please visit the
+        <a href="./rest.html">API Documentation</a>
+        .
+      </p>
+      <div class="navigation-buttons">
+        <a href="#" class="prev-page" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+          Anterior
+        </a>
+        <a href="rest.html" class="next-page">
+          Rest API
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  
+</body>
+
 </html>
