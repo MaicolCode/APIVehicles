@@ -1,9 +1,9 @@
 ### GET para obtener todos los vehiculos
 GET http://localhost:6675/vehicles
 ### GET para obtener todos los vehiculos por año
-GET http://localhost:6675/vehicles?year=2018
+GET http://localhost:6675/vehicles/all?year=2018
 ### GET para obtener un vehiculo por su id.
-GET http://localhost:6675/vehicles/ed6a3d5e-3586-11ef-a34c-6c626dedf03d
+GET http://localhost:6675/vehicles/5ae94a8f-c6e6-4360-8db2-3175d922caaa
 
 ### POST para agregar un nuevo vehiculo.
 POST http://localhost:6675/vehicles
@@ -19,11 +19,11 @@ Content-Type: application/json
 }
 
 ### PATCH para actualizar un vehiculo.
-PATCH http://localhost:6675/vehicles/ed6a3d5e-3586-11ef-a34c-6c626dedf03d
+PATCH http://localhost:6675/vehicles/5ae94a8f-c6e6-4360-8db2-3175d922caaa
 Content-Type: application/json
 
 {  
-  "year": 2020
+  "year": 2019
 }
 ### DELETE para eliminar un vehiculo.
 DELETE http://localhost:6675/vehicles/7a45e234-358c-11ef-a34c-6c626dedf03d
