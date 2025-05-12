@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/documentation.css" />
+    <link rel="stylesheet" href="/styles/menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>API Vehicles Introduction</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu-bar">
+        <section class="menu-options">
+          <article>
+            <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
+            <div class="option-docs-header">
+              <h3>Sport vehicles API</h3>
+            </div>
+          </article>
+          <ul>
+            <li><a href="./index.html">Vehicles</a></li>
+            <li><a href="">More</a></li>
+          </ul>
+        </section>
+        <section class="menu-others">
+          <article>
+            <a href="https://github.com/MaicolCode/APIVehicles" target="_blank">
+              <img
+                src="/github-icon.svg"
+                alt="github-logo"
+                height="10"
+                width="10"
+              />
+            </a>
+          </article>
+        </section>
+      </nav>
+    </header>
+    <main class="documentation-container">
+      <section class="option-docs">
+        <span>About</span>
+        <ul class="option-docs-list">
+          <li>
+            <a href="http://localhost:6675/vehicles/web/introduction.html">
+              Introduction
+            </a>
+          </li>
+        </ul>
+        <span>Rest API</span>
+        <ul class="option-docs-list">
+          <li>
+            <a href="rest.html/#base-url">Base URL</a>
+          </li>
+          <li>
+            <a href="rest.html/#endpoints">Endpoints</a>
+          </li>
+          <li>
+            <a href="rest.html/#error-handling">Error Handling</a>
+          </li>
+        </ul>
+      </section>
+      <section class="notes-docs">
+        <h1>Welcome to the Sport Vehicles API</h1>
+        <p class="description">
+          The sports vehicles API is a resource to access the information of
+          sports vehicles, the objective of this api is to provide a resource
+          that can be used for the development and creation of web projects, the
+          API provides all the essential components for the developer such as
+          the information of the vehicles and their respective endpoints.
+        </p>
+        <h2>Enpoints Features</h2>
+        <ul class="features-list">
+          <li>
+            <strong>Retrieve all vehicles:</strong>
+            Fetch a list of all available vehicles in the database.
+          </li>
+          <li>
+            <strong>Retrieve a vehicle by ID:</strong>
+            Get detailed information about a specific vehicle using its unique
+            ID.
+          </li>
+          <li>
+            <strong>Add a new vehicle:</strong>
+            Create a new entry in the database for a sports vehicle.
+          </li>
+          <li>
+            <strong>Update a vehicle:</strong>
+            Modify the details of an existing vehicle.
+          </li>
+          <li>
+            <strong>Delete a vehicle:</strong>
+            Remove a vehicle from the database using its ID.
+          </li>
+        </ul>
+        <p>
+          For more details on how to use the API, including endpoints, request
+          formats, and example responses, please visit the
+          <a href="./rest.html">API Documentation</a>
+          .
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

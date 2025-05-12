@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/documentation.css" />
+    <link rel="stylesheet" href="/styles/menu.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,36 +38,43 @@
     </script>
     <header>
       <nav class="menu-bar">
-        <article>
-          <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
-          <div class="option-docs-header">
-            <h3>Sport vehicles API</h3>
-          </div>
-        </article>
-        <ul>
-          <li><a href="./index.html">Vehicles</a></li>
-          <li><a href="">More</a></li>
-        </ul>
+        <section class="menu-options">
+          <article>
+            <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
+            <div class="option-docs-header">
+              <h3>Sport vehicles API</h3>
+            </div>
+          </article>
+          <ul>
+            <li><a href="../index.html">Vehicles</a></li>
+            <li><a href="">More</a></li>
+          </ul>
+        </section>
+        <section class="menu-others">
+          <article>
+            <a href="https://github.com/MaicolCode/APIVehicles" target="_blank">
+              <img src="/github-icon.svg" alt="github-logo" height="10" width="10"/>
+            </a>
+          </article>
+        </section>
       </nav>
     </header>
     <main class="documentation-container">
       <section class="option-docs">
-        <span>Details</span>
+        <span>About</span>
+        <ul class="option-docs-list">
+          <li><a href="../introduction.html">Introduction</a></li>
+        </ul>
+        <span>Rest API</span>
         <ul class="option-docs-list">
           <li>
             <a href="#base-url">Base URL</a>
-          </li>
-          <li>
-            <a href="#authentication">Authentication</a>
           </li>
           <li>
             <a href="#endpoints">Endpoints</a>
           </li>
           <li>
             <a href="#error-handling">Error Handling</a>
-          </li>
-          <li>
-            <a href="#examples">Examples</a>
           </li>
         </ul>
       </section>
