@@ -12,6 +12,7 @@ export const createApp = ({ modelVehicle }) => {
   app.use(json())
   app.use(corsMiddleware)
   app.use(express.static('styles'))
+  app.use(express.static('utils'))
   app.use('/vehicles', vehicleRouter({ modelVehicle }))
 
   app.listen(PORT, () => {
