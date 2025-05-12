@@ -18,64 +18,6 @@ header {
   width: 100%;
 }
 
-.menu-bar {
-  display: flex;
-  width: 100%;
-  height: 70px;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-
-  article {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .option-docs-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-
-    h3 {
-      margin: 0;
-      font-size: medium;
-    }
-  }
-
-  ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin-left: 50px;
-  }
-
-  ul li {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-
-    a {
-      text-decoration: none;
-      color: #333;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        text-shadow: 0 0 1px #686868b0;
-        color: #353535;
-      }
-    }
-  }
-}
-
-.menu-bar img {
-  width: auto;
-  height: 50px;
-  margin: 0;
-}
-
 .documentation-container {
   width: 100%;
   height: 100%;
@@ -141,17 +83,22 @@ header {
   padding: 20px;
   box-sizing: border-box;
 
-  h1 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+  p {
+    margin: 10px 0px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #555;
   }
 
-  p {
-    margin: 0;
-    font-size: 16px;
-    color: #555;
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+
+    li {
+      color: #333;
+    }
   }
 }
 
