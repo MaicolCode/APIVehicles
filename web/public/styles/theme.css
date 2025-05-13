@@ -2,7 +2,7 @@
     --bg-primary: #ffffff;
     --text-primary: #000000;
     --bg-secondary: #f1f1f1;
-    --bg-secondary-dark: #e0e0e0;
+    --bg-secondary-dark: #d6d6d6;
     --text-secondary: #333333;
     --accent-color: #007bff;
     --hover-color: #0056b3;
@@ -13,6 +13,7 @@ body.dark-mode {
     --bg-primary: #121212;
     --text-primary: #ffffff;
     --bg-secondary: #1e1e1e;
+    --bg-secondary-dark: #d6d6d6b7;
     --text-secondary: #e0e0e0;
     --accent-color: #4da6ff;
     --hover-color: #6bb6ff;
@@ -25,9 +26,8 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.documentation-container {
-    background-color: var(--bg-primary);
-}
+
+
 
 
 

@@ -57,7 +57,7 @@
   }
 
   .menu-others {
-    padding: 0 10px;
+    padding: 0 20px;
 
     a {
       display: flex;
@@ -76,7 +76,11 @@
         fill: var(--text-secondary);
         transition: fill 0.3s ease-in-out;
       }
-    }    
+    }  
+    
+    .hidden {
+      display: none;
+  }
   }
 }
 

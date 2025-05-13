@@ -37,6 +37,12 @@ header {
   padding: 20px 10px;
   border-right: 1px dashed var(--bg-secondary-dark);
 
+  .active {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 5px;
+  }
+
   span {
     font-size: 14px;
     font-weight: 600;
@@ -47,7 +53,7 @@ header {
   .option-docs-list {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 5px;
     list-style: none;
     padding: 0px 0px 0px 10px;
     padding: 0;
@@ -85,7 +91,7 @@ header {
 
   p {
     margin: 10px 0px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 25px;
     color: var(--text-secondary);
   }
@@ -95,6 +101,7 @@ header {
     flex-direction: column;
     gap: 20px;
     padding-left: 30px;
+    font-size: 15px;
 
     li {
       color: var(--text-secondary);
