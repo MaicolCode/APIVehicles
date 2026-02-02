@@ -76,18 +76,81 @@
       })
   </script>
 
-  <body>
-    <header>
-      <nav class="menu-bar">
-        <img src="/logo_vehicle.svg" alt="FakeAPI logo car sport" />
-        <ul>
-          <li><a href="./rest.html">API Documentation</a></li>
-          <li><a href="">More</a></li>
-        </ul>
-      </nav>
+  <body class="page-home">
+    <header class="main-nav-header">
+      <div class="nav-pill-container">
+        <!-- Logo Section -->
+        <a href="index.html" class="nav-brand-area">
+          <img src="/logo_vehicle.svg" alt="API Logo" class="brand-icon" />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links-wrapper">
+          <ul class="nav-links-list">
+            <li><a href="index.html" class="nav-item-link">Showcase</a></li>
+            <li><a href="rest.html" class="nav-item-link">Docs</a></li>
+            <li><a href="introduction.html" class="nav-item-link">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- GitHub / Others -->
+        <div class="nav-actions-area">
+          <a href="https://github.com/MaicolCode/APIVehicles" target="_blank" class="github-pill-btn">
+            <svg height="20" viewBox="0 0 24 24" width="20" fill="currentColor">
+              <path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.24.73-.55v-1.84c-3.03.66-3.67-1.48-3.67-1.48-.5-1.27-1.2-1.61-1.2-1.61-.99-.68.08-.66.08-.66 1.1.08 1.67 1.13 1.67 1.13.97 1.66 2.54 1.18 3.16.9.1-.7.38-1.18.7-1.44-2.41-.27-4.96-1.2-4.96-5.38 0-1.19.43-2.17 1.14-2.93-.11-.27-.5-1.38.11-2.88 0 0 .91-.29 3 1.12a10.4 10.4 0 015.5 0c2.09-1.41 3-1.12 3-1.12.61 1.5.22 2.61.11 2.88.71.76 1.14 1.74 1.14 2.93 0 4.19-2.55 5.11-4.98 5.38.39.34.74 1.01.74 2.03v3.01c0 .32.18.65.74.55A11 11 0 0012 1.27z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </header>
+
     <main>
-      <div class="slide_content"></div>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Fuel Your Apps <br> <span class="accent-text">With Performance Data</span></h1>
+          <p>The ultimate RESTful gateway for high-fidelity sports vehicle specifications. Accurate, fast, and engineered for automotive enthusiasts.</p>
+          <div class="hero-actions">
+            <a href="rest.html" class="btn-primary">Explore API</a>
+            <a href="#showcase" class="btn-secondary">View Showcase</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="showcase" class="showcase-section">
+        <div class="slide_content">
+          <!-- Vehicles will be injected here -->
+        </div>
+      </section>
     </main>
-  </body>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="menu-logo">
+            <img src="/logo_vehicle.svg" alt="Sport Vehicles API Logo" />
+            <h3>Sport Vehicles API</h3>
+          </a>
+          <p>The premium data engine for the next generation of automotive developers and enthusiasts worldwide.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="rest.html">API Documentation</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="https://github.com/MaicolCode/APIVehicles">GitHub Project</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://github.com/MaicolCode/APIVehicles/issues">Report an Bug</a></li>
+            <li><a href="mailto:contact@sportvehicles.api">Get in Touch</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Sport Vehicles API. All rights reserved.</p>
+          <p>Designed for Excellence.</p>
+        </div>
+      </div>
+    </footer>
 </html>
