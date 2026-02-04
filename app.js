@@ -3,6 +3,7 @@ import { corsMiddleware } from './middlewares/cors.js'
 import { vehicleRouter } from './routes/vehicle.js'
 import { __dirname } from './utils/dirname.js'
 import { join } from 'path'
+import { routerPages } from './routes/pages.js'
 
 export const createApp = ({ modelVehicle }) => {
   const PORT = process.env.PORT ?? 6675
@@ -14,6 +15,7 @@ export const createApp = ({ modelVehicle }) => {
   app.use(express.static('styles'))
   app.use(express.static('utils'))
   app.use('/vehicles', vehicleRouter({ modelVehicle }))
+  app.use('/', routerPages)
 
   app.listen(PORT, () => {
     console.log(`Server listener in port http://localhost:${PORT}`)
